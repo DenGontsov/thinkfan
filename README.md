@@ -46,5 +46,6 @@ hwmon /opt/sensors/cpu/temp3_input
 
 # Restart and check 
 sudo systemctl restart thinkfan
+
 sudo systemctl status thinkfan
- check
+
