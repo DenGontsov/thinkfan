@@ -5,6 +5,20 @@ sudo chmod 666 /proc/acpi/ibm/fan
 sudo chmod +r /sys/devices/platform/coretemp.0/hwmon/hwmon*/temp*_input
 ```
 
+# Add and activate modules
+```
+Create file /etc/modprobe.d/thinkpad.conf and add folowing config
+```
+```
+options thinkpad_acpi fan_control=1
+```
+
+```
+# modprobe -r thinkpad_acpi
+# modprobe thinkpad_acpi
+# modprobe thinkpad_acpi fan_control=1
+```
+
 # Find all sensors on your device:
 ```
 find /sys/devices/platform/coretemp.0/hwmon/hwmon*/temp*_input
